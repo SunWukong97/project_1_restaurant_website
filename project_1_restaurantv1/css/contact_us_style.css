@@ -19,6 +19,41 @@ a{
 
 
 
+.alertDialog{
+    background-color: rgba(0, 0, 0, 0.37);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: fixed;
+
+    display: none;
+}
+
+.alertDialogContent{
+    width: initial;
+    padding: 5em 1em 2em 1em;
+    width: 75%;
+    background: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 53%;
+    text-align: center;
+}
+.alertDialogContent p{
+    font-weight: 600;
+    font-size: 1.5rem;
+    box-sizing: border-box;
+}
+
+.alertDialogButton{
+    margin-top: 3em;
+    border: none;
+    padding: 0.5em 2em;
+    background-color: black;
+    color: white;
+    /* font-size: 1.15rem; */
+}
+
 .navbar{
     padding-top: 1.25em;
     padding-bottom: 1.25em;
@@ -36,7 +71,7 @@ a{
 
 .logo{
     text-align: center;
-    font-size: 1.75em;
+    font-size: 2rem;
     
 }
 .navLinks ul{
@@ -66,7 +101,7 @@ a{
     padding-bottom: 7em;
 }
 
-.formWrapper p{
+.formWrapper h1{
     text-align: center;
     padding-top: 3em;
     padding-bottom: 1em;
@@ -85,6 +120,14 @@ input[type=text], textarea{
 
     box-sizing: border-box;
     padding: 0.5em 0.5em;
+}
+
+.errorMessage{
+    display: none;
+    margin-top: -1em;
+    padding-bottom: 1em;
+    font-size: 0.8rem;
+    color: rgb(255, 0, 0);
 }
 
 .submitButton{
@@ -111,7 +154,7 @@ footer{
 
 footer h2{
     padding-bottom: 1em;
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 
 footer p{
@@ -162,16 +205,35 @@ footer p{
     }
 
 
+
+    .alertDialogContent{
+        margin-top: 40%;
+        width: 55%;
+        padding: 5em 2em 2em 2em;
+    }
+
+    .alertDialog p{
+        font-size: 2rem;
+    }
+    .alertDialogButton{
+        font-size: 1.25rem;
+        margin-top: 5em;
+    }
     .formWrapper{
         min-height: 100%;
         padding-bottom: 6em;
     }
 
-    .formWrapper p{
+    .formWrapper h1{
         font-size: 2rem;
     }
     input[type=text], textarea{
         font-size: 1.25rem;
+        width: 100%;
+    }
+
+    .errorMessage{
+        margin-top: -1.75em;
     }
 
     .submitButton{
@@ -203,6 +265,7 @@ footer p{
 
     .logo{
         margin-left: 2em;
+        font-size: 2rem;
     }
 
     .navLinks{
@@ -222,15 +285,38 @@ footer p{
     .navLinks a{
         padding: 0;
         width: 100%;
-        font-size: 1.2rem;
+        font-size: 1.25rem;
     }
 
     .navLinks a:hover{
         font-weight: 600;
     }
 
+    .alertDialogContent{
+        margin-top: 17%;
+        width: 32.5%;
+    }
+
+    .alertDialogButton{
+        margin-top: 4em;
+    }
+
     .formWrapper{
         width: 50%;
+    }
+
+    .errorMessage{
+        margin-top: -1.75em;
+    }
+
+    footer{
+        padding-bottom: 2em;
+       
+        width: 100%;
+    }
+
+    footer p{
+        display: inline;
     }
     
 }

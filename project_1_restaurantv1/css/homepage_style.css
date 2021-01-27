@@ -44,7 +44,7 @@ position: absolute, removes item from document flow, but some how flex still aff
 
 .logo{
     text-align: center;
-    font-size: 1.75em;
+    font-size: 2rem;
     
 }
 
@@ -138,6 +138,7 @@ img{
 .story h2{
     padding-bottom: 1.5em;
     font-weight: 600;
+    font-size: 1.25rem;
 }
 
 .story p{
@@ -159,7 +160,7 @@ footer{
 
 footer h2{
     padding-bottom: 1em;
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 
 footer p{
@@ -324,6 +325,7 @@ footer p{
 
     .logo{
         margin-left: 2em;
+        font-size: 2rem;
     }
     .navLinks{
         width: 30%;
@@ -343,7 +345,7 @@ footer p{
 
     .navLinks a{
         padding: 0;
-        font-size: 1.2rem;
+        font-size: 1.25rem;
     }
 
     .navLinks a:hover{
