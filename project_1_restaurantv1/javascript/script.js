@@ -1,3 +1,6 @@
+/**
+ * toggles the drop down menu on mobile
+*/
 function toggleDropDownMenu(){
     let menu = document.getElementById("myLinks");
 
@@ -24,7 +27,7 @@ let emailFieldError = document.getElementById("emailErrorMessage");
 let subjectFieldError = document.getElementById("subjectErrorMessage");
 let messageFieldError = document.getElementById("messageErrorMessage");
 
-/*adds event listeners to each input field to see whether or not they have been filled in order to turn off the error message on the form*/
+/*adds event listeners to each input field to see whether or not they have been filled in order to turn off the error message on the form.*/
 nameField.addEventListener("keyup", (event)=>{
     if(nameField.value != "")
     {
@@ -58,7 +61,7 @@ messageField.addEventListener("keyup", (event) =>{
 
 /**
  * when submit button is clicked
- * will take the input from each of the form's field and store it within an object. and print the input onto the console
+ * will take the input from each of the form's field and store it within an object, and print the input onto the console.
  * 
  * will also display an alert dialog if all parts of the form has been filled, if not the form will not submit.
  */
@@ -93,7 +96,7 @@ function dismissDialog(){
     alertDialog.style.display = "none";
 }
 
-//makes it so when the user clicks anywhere else on the screen the alert dialogue will close
+//makes it so when the user clicks anywhere else on the screen the alert dialogue will close.
 window.onclick = (event) =>{
     
     if(event.target == alertDialog)
@@ -101,9 +104,8 @@ window.onclick = (event) =>{
 }
 
 /**
- * will check to see if all parts of the form has been filled out and
- * no fields have been left empty.
- * if any of the fields have been left empty when submitting the form an error will display showing which field needs to be filled.
+ * will check to see if all parts of the form has been filled out and if no fields have been left empty.
+ * if any of the fields have been left empty when submitting the form an error will display showing which field(s) needs to be filled.
  * @param {*} nameFieldValue string from name field
  * @param {*} emailFieldValue string from email field
  * @param {*} subjectFieldValue string from subject field
@@ -141,7 +143,7 @@ function formValidation(nameFieldValue, emailFieldValue, subjectFieldValue, mess
 }
 
 /**
- * Checks to see if the value passed through is an email addresses with the correct formatting e.x something@emailclient.com 
+ * Checks to see if the value passed through is an email addresses with the correct formatting e.x something@emailclient.com. 
  * 
  * @param {*} emailFieldValue the email address to be checked 
  */
