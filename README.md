@@ -4,4 +4,8 @@ Images used are not my own. They are stock images from pexels.com and unsplash.c
 credits to the original photographers (unsplash): nikolay smeh, amy tran
 credits to the original photographers (pexels): JAN N G U Y E N, Jonathan Borba, Nguyen Phuong NGUYEN 
 
-updates: currently implementing form validation via javascript for contact page
+updates: 
+implementing form validation via javascript for Contact Page--- COMPLETED
+
+creating About Page--- IN PROGRESS
+
