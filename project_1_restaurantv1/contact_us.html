@@ -15,6 +15,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    
+    
+    <div class="alertDialog" id="alertDialog">
+        <div class="alertDialogContent">
+            <p>Message Sent</p>
+            <button class="alertDialogButton" onclick="dismissDialog()">OK</button>
+        </div>   
+    </div>
+    
+    
+    
     <header>
         <nav>
             <div class="navbar">
@@ -32,7 +43,7 @@
                 <div class="navLinks">
                     <ul id="myLinks">
                         <li><a href="#">ABOUT</a></li>
-                        <li><a href="#">MENU</a></li>
+                        <li><a href="menu.html">MENU</a></li>
                         <li><a href="#">CONTACT</a></li>
                     </ul>
                 </div>
@@ -44,12 +55,16 @@
 
     
     <div class="formWrapper">
-        <p>Contact Us</p>
-        <form action="" method="POST">
+        <h1>Contact Us</h1>
+        <form action="" method="POST" onsubmit="return submitButtonAction()">
             <input type="text" id="nameField" name="fullName" placeholder="Full Name">
+            <p class="errorMessage" id="nameErrorMessage">This field is required</p>
             <input type="text" id="emailField" name="email" placeholder="Email Address">
+            <p class="errorMessage" id="emailErrorMessage">This field is required</p>
             <input type="text" id="subjectField" name="subject" placeholder="Subject">
+            <p class="errorMessage" id="subjectErrorMessage">This field is required</p>
             <textarea name="message" id="messageField" cols="30" rows="8" placeholder="Message"></textarea>
+            <p class="errorMessage" id="messageErrorMessage">This field is required</p>
             <input type="button" value="Submit" class="submitButton" onclick="submitButtonAction()">
 
         </form>
