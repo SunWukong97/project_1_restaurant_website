@@ -7,5 +7,9 @@ credits to the original photographers (pexels): JAN N G U Y E N, Jonathan Borba,
 updates: 
 implementing form validation via javascript for Contact Page--- COMPLETED
 
-creating About Page--- IN PROGRESS
+creating About Page--- COMPLETED
+
+rearragned menu sections
+
+re organized javascript, sepereated the form action script into its own file
 
