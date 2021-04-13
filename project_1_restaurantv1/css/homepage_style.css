@@ -460,9 +460,15 @@ footer p{
         margin-top: 1em;
     }
 
+    
+
+    
+    
+
+
 }
 
-@media screen and (width: 1024px) and (height: 1366px){
+@media screen and (width: 1024px) and (height: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5){
     .hamburgerMenu{
         display: none;
     }
