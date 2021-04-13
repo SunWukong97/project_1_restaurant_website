@@ -1,3 +1,13 @@
+/**
+ * @author Thomas Nguyen
+ * This script controls how the form element will behave based on the inputs it recieves from the user,
+ * if any fields are left empty on the form an error message will appear under the empty field. If all fields
+ * are filled out when the user clicks the submit button a pop up modal will appear to indicate that the form 
+ * has been submitted.
+ * The information from each field will also be outputted onto browser's console.  
+ */
+
+
 let alertDialog = document.getElementById("alertDialog");
 
 let nameField = document.getElementById("nameField");
@@ -60,13 +70,22 @@ function submitButtonAction(){
         console.log(`${nameField.value}, ${emailField.value}, ${subjectField.value}, ${messageField.value}`);
 
         //experimenting with objects
-        /*let person = {
-            'name': nameField,
-            'email': emailField,
-            'subject': subjectField
+        /*
+            will store the value of each field within a person object
+         */
+        let person = {
+            'name': nameField.value,
+            'email': emailField.value,
+            'subject': subjectField.value,
+            'message': messageField.value
         };
     
-        console.log(person.name);*/
+        //object properties are known as keys, similar to a map list
+        for(let key in person){
+            if(person.hasOwnProperty(key)){
+                console.log(key + ":", person[key]);
+            }
+        }
         alertDialog.style.display = "block";
 
         return true;
@@ -76,11 +95,18 @@ function submitButtonAction(){
   
 }
 
+
+
 /**
  * turns the alert dialog off 
  */
 function dismissDialog(){
-    alertDialog.style.display = "none";
+    alertDialog.classList.add('animateOverlayFadeOut');
+    setTimeout(() => {
+        alertDialog.classList.remove('animateOverlayFadeOut');
+        alertDialog.style.display = 'none';
+    }, 300);
+    
 }
 
 //makes it so when the user clicks anywhere else on the screen the alert dialogue will close.
@@ -93,6 +119,7 @@ window.onclick = (event) =>{
 /**
  * will check to see if all parts of the form has been filled out and if no fields have been left empty.
  * if any of the fields have been left empty when submitting the form an error will display showing which field(s) needs to be filled.
+ * Along with the field's border becoming bold
  * @param {*} nameFieldValue string from name field
  * @param {*} emailFieldValue string from email field
  * @param {*} subjectFieldValue string from subject field
